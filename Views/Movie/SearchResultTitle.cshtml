@@ -1,0 +1,13 @@
+﻿
+
+<h1>Search Results By Title</h1>
+
+<p>The database has the following movies with "@ViewBag.Title" in the title: </p>
+
+    <ul>
+        @foreach (var movie in ViewBag.MovieList)
+        {
+            <li>@movie.Title</li>
+        }
+    </ul>
+

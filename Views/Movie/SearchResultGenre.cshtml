@@ -1,0 +1,15 @@
+﻿@*
+*@
+
+
+<h1>Search Results By Genre</h1>
+
+<p>The database has these @ViewBag.Genre movies: </p>
+
+<ul>
+    @foreach (var movie in ViewBag.MovieList)
+    {
+        <li>@movie.Title</li>
+    }
+</ul>
+

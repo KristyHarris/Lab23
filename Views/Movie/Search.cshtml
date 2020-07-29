@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Movie Search";
+}
+
+<h1>Movie Search</h1>
+<hr />
+<hr />
+<h4>Search by title keyword here.</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Movie" asp-action="SearchResultTitle" method="Post">
+            <div class="form-group">
+                <label type="text" name="title" class="control-label"></label>
+                <input type="text" name="title" class="form-control" />
+                <span type="text" name="title" class="text-danger"></span>
+                <div>
+                    <input type="submit" value="Search" asp-action="SearchResultTitle" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+        <hr />
+        <hr />
+        <h4>Search by genre here.</h4>
+        <hr />
+        <form asp-controller="Movie" asp-action="SearchResultGenre" method="Post">
+            <div class="form-group">
+                <label type="text" name="genre" class="control-label"></label>
+                <select type="text" name="genre" class="form-control">
+                    <option>Scifi</option>
+                    <option>Animated</option>
+                    <option>Drama</option>
+                    <option>Horror</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Search" asp-action="SearchResultGenre" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

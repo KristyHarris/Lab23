@@ -1,0 +1,22 @@
+﻿
+@model List<Movie>
+
+<table>
+    @foreach (var movie in Model)
+    {
+        <tr>
+            <td>
+                @movie.Id
+            </td>
+            <td>
+                @movie.Genre
+            </td>
+            <td>
+                @movie.Title
+            </td>
+            <td>
+                @movie.Runtime minutes
+            </td>
+        </tr>
+    }
+</table>
